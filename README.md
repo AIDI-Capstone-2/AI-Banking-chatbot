@@ -43,6 +43,6 @@ The aim of the project is to develop a banking chatbot capable of executing real
 - **Immediate Tasks**: Complete final testing and debugging in Jupyter Notebook.
 - **Integration**: Transition from trial mode to production. This involves making the necessary adjustments to ensure the chatbot is ready for deployment.
 - **Deployment**: Deploy the chatbot on the banking platform, making it accessible to users.
-- **Completion Timeline**: Expected to complete these tasks within the next 3-5 days.
+
 
 ---
