@@ -1,5 +1,5 @@
 # AI-Banking-chatbot
-### Project Update Report: Real-Time Actionable Banking Chatbot
+### Project Update Report: Real-Time Actionable Banking Chatbot (in progress project)
 
 #### Objective
 The aim of the project is to develop a banking chatbot capable of executing real-time actions such as blocking credit cards. This report provides an update on the progress, detailing the approaches tried, implementation environment, current status, and next steps.
