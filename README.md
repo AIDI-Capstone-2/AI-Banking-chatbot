@@ -1,9 +1,7 @@
-
-
 ---
 
 # OpenAi Banking Chatbot Application
-
+### Acess the file: https://amc-u64ezt75sq-uc.a.run.app
 This is a Flask-based banking chatbot application designed for Durham Bank. It uses LangChain to process user queries, execute SQL commands, and return appropriate responses based on predefined rules. The chatbot handles various banking operations and queries, including money transfers, credit card payments, and loan management.
 
 ## Features
