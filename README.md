@@ -1,48 +1,114 @@
-# AI-Banking-chatbot
-### Project Update Report: Real-Time Actionable Banking Chatbot (in progress project)
-
-#### Objective
-The aim of the project is to develop a banking chatbot capable of executing real-time actions such as blocking credit cards. This report provides an update on the progress, detailing the approaches tried, implementation environment, current status, and next steps.
+Here’s a basic structure for a README file for your Flask banking application, integrating LangChain and SQL queries:
 
 ---
 
-#### Approaches
+# Flask Banking Chatbot Application
 
-**1. LLM Model (Gemma)**
-- **Custom Dataset**: We created a dataset tailored specifically to banking queries. This dataset includes various scenarios that customers might encounter, such as blocking a credit card, checking account balance, or requesting a new card.
-- **Training Process**: The LLM (Gemma) model was fine-tuned using TensorFlow and PyTorch. This process involved adjusting the model parameters to better respond to specific banking queries.
-- **Tools and Libraries**: TensorFlow and PyTorch were the primary libraries used for model training. Additional preprocessing tools were used to clean and prepare the dataset.
-- **Performance**: The model was evaluated using metrics such as accuracy, precision, and recall. The fine-tuned model demonstrated high accuracy and relevance in its responses.
-- **Outcome**: The successfully trained model delivers accurate and contextually appropriate responses to user queries, enhancing the chatbot's ability to handle banking tasks.
+This is a Flask-based banking chatbot application designed for Durham Bank. It uses LangChain to process user queries, execute SQL commands, and return appropriate responses based on predefined rules. The chatbot handles various banking operations and queries, including money transfers, credit card payments, and loan management.
 
-**2. LangChain and GPT API**
-- **Chat Retrieval Chain**: Implemented a chat retrieval chain to fetch relevant information based on user inputs. This helps in understanding the context and retrieving the appropriate data.
-- **Function Triggering**: Set up rules and conditions for triggering functions based on user queries. For example, when a user requests to block a credit card, the function triggering mechanism ensures the action is carried out seamlessly.
-- **Tools and Libraries**: The OpenAI API and LangChain framework were used for implementing this approach. These tools help in creating robust and scalable solutions for handling user queries.
-- **Capabilities**: Enabled the chatbot to perform actions like blocking credit cards, updating records, and providing real-time information.
-- **Outcome**: Successfully integrated function triggering with chat responses, allowing the chatbot to perform actionable tasks based on user inputs.
+## Features
 
----
+- **User Authentication**: Secure login with hashed password verification.
+- **Dynamic Query Handling**: Translates user queries into SQL commands using LangChain.
+- **PDF Responses**: Provides responses in PDF format based on predefined rules.
+- **Transaction Management**: Supports money transfers between accounts, credit card payments, and loan EMI payments.
+- **PDF Reading**: Extracts and reads information from PDF files.
 
-#### Implementation Environment
-- **Streamlit**: Used for creating the frontend interface, providing a chat-like environment for user interactions. Streamlit makes it easy to build and deploy interactive web applications.
-- **Flask API**: Handles the backend logic, including data queries and interactions with the dataset. Flask provides a lightweight framework for building web applications and APIs.
-- **Integration**: The Streamlit frontend communicates with the Flask backend, allowing for real-time data actions such as blocking credit cards. This integration ensures smooth and efficient handling of user requests.
+## Installation
 
----
+### Prerequisites
 
-#### Current Status and Testing
-- **Testing Environment**: Final testing is being conducted in Jupyter Notebook. This environment allows for detailed analysis and debugging of the chatbot's performance.
-- **Trial Mode**: Both approaches are currently in trial mode, allowing us to evaluate their effectiveness and identify areas for improvement.
-- **Progress**: The testing phase has yielded positive results, with the chatbot successfully handling various banking queries. Some issues have been identified and are being addressed.
-- **Next Steps**: Immediate tasks include final testing and debugging. We aim to resolve any outstanding issues to ensure the chatbot functions smoothly.
+- Python 3.8+
+- Flask
+- SQLite
+- LangChain
+- Other Python libraries
 
----
+### Setup
 
-#### Next Steps
-- **Immediate Tasks**: Complete final testing and debugging in Jupyter Notebook.
-- **Integration**: Transition from trial mode to production. This involves making the necessary adjustments to ensure the chatbot is ready for deployment.
-- **Deployment**: Deploy the chatbot on the banking platform, making it accessible to users.
+1. **Clone the Repository**
+
+   ```bash
+   git clone https://github.com/yourusername/banking-chatbot.git
+   ```
+
+2. **Navigate to the Project Directory**
+
+   ```bash
+   cd banking-chatbot
+   ```
+
+3. **Create a Virtual Environment**
+
+   ```bash
+   python -m venv venv
+   ```
+
+4. **Activate the Virtual Environment**
+
+   - On Windows:
+
+     ```bash
+     venv\Scripts\activate
+     ```
+
+   - On macOS/Linux:
+
+     ```bash
+     source venv/bin/activate
+     ```
+
+5. **Install Dependencies**
+
+   ```bash
+   pip install -r requirements.txt
+   ```
+
+6. **Set Up Environment Variables**
+
+   Create a `.env` file in the project root and add your OpenAI API key:
+
+   ```env
+   OPENAI_API_KEY=your_openai_api_key
+   ```
+
+7. **Create the SQLite Database**
+
+   - Make sure you have a `login.db` and `customer_db` for authentication and customer data.
+
+8. **Run the Application**
+
+   ```bash
+   flask run
+   ```
+
+## Configuration
+
+- **`app.py`**: Main Flask application file where routes and functionality are defined.
+- **`models.py`**: Contains database models and SQLAlchemy setup.
+- **`config.py`**: Configuration settings for the application.
+- **`rules_and_info`**: Contains the rules and information for processing user queries.
+
+## Usage
+
+1. **Login**: Users must log in with their username and password.
+2. **Chat**: Interact with the chatbot to perform various banking tasks. The bot translates user queries into SQL commands and retrieves the necessary information.
+3. **PDF Responses**: For certain queries, the bot will respond with a link to a PDF document.
+
+## Troubleshooting
+
+- Ensure that the `.env` file is properly set up with your API key.
+- Verify that the SQLite database files are correctly configured and located in the project directory.
+- Check the application logs for any errors during execution.
+
+## License
+
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+
+## Contributing
+
+Contributions are welcome! Please fork the repository and submit a pull request with your improvements or bug fixes.
+
 
 
 ---
