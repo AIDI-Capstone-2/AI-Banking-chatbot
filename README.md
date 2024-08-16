@@ -1,8 +1,8 @@
-Here’s a basic structure for a README file for your Flask banking application, integrating LangChain and SQL queries:
+
 
 ---
 
-# Flask Banking Chatbot Application
+# OpenAi Banking Chatbot Application
 
 This is a Flask-based banking chatbot application designed for Durham Bank. It uses LangChain to process user queries, execute SQL commands, and return appropriate responses based on predefined rules. The chatbot handles various banking operations and queries, including money transfers, credit card payments, and loan management.
 
