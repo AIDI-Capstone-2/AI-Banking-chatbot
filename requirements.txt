@@ -1,0 +1,14 @@
+Flask
+bcrypt
+langchain-openai
+langchain-community
+langchain-core
+SQLAlchemy
+fitz
+PyMuPDF
+gunicorn
+requests
+Jinja2
+SQLAlchemy
+frontend
+tools
